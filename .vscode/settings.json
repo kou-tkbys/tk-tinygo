@@ -1,0 +1,10 @@
+{
+    // "tinygo info pico" コマンドを実行して得られる項目"build tags","cached GOROOT"をコピペ
+    "go.toolsEnvVars": {
+        "GOROOT": "~\\AppData\\Local\\tinygo\\goroot-96fa8a51e09b72a6e4692420ed7b88c66054f1e202d1f4d3d40471f581031761",
+        "GOFLAGS": "-tags=cortexm,baremetal,linux,arm,rp2040,rp,pico,tinygo,math_big_pure_go,gc.conservative,scheduler.tasks,serial.uart"
+    },
+    "cSpell.words": [
+        "pico"
+    ],
+}
