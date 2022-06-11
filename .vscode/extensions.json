@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "golang.go",
+        "golang.go-nightly",
+        "tinygo.vscode-tinygo",
+        "streetsidesoftware.code-spell-checker",
+    ]
+}
