@@ -2,7 +2,12 @@
     "words": [
         "ardiuno",
         "avrdude",
+        "DDAP",
         "GOROOT",
+        "IFAP",
+        "INTH",
+        "KDAP",
+        "NOBLINK",
         "pico",
         "tinygo"
     ]
