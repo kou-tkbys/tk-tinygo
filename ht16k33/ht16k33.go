@@ -14,8 +14,8 @@ type Device struct {
 // This function only creates the Device object, it does not touch the device.
 // 任意のI2Cバスと通信するデバイスオブジェクトを生成します。
 // デバイスオブジェクトを生成するだけで、実デバイスへタッチしていません。
-func New(bus drivers.I2C) Device {
-	return Device{
+func New(bus drivers.I2C) *Device {
+	return &Device{
 		bus:     bus,
 		Address: REG_BASE_HT_ADDR,
 	}
