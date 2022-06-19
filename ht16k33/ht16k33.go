@@ -24,8 +24,14 @@ func New(bus drivers.I2C) *Device {
 // Configure sets up the device for communication
 func (d *Device) Configure() {
 	// FIXME:このタイミングですべてのLEDが点灯した状態になる。
-	d.bus.WriteRegister(d.Address, REG_SS, []uint8{COM_SS_NORMAL})                 // Wakeup
-	d.bus.WriteRegister(d.Address, REG_DSP, []uint8{COM_DSP_ON | COM_DSP_NOBLINK}) // Display on and no blinking
-	d.bus.WriteRegister(d.Address, REG_RIS, []uint8{COM_RIS_OUT})                  // INT pin works as row output
-	d.bus.WriteRegister(d.Address, REG_DIM, []uint8{COM_DIM_16})                   // Brightness set to max
+	d.i2cWrite(REG_SS, COM_SS_NORMAL)               // Wakeup
+	d.i2cWrite(REG_DSP, COM_DSP_ON|COM_DSP_NOBLINK) // Display on and no blinking
+	d.i2cWrite(REG_RIS, COM_RIS_OUT)                // INT pin works as row output
+	d.i2cWrite(REG_DIM, COM_DIM_16)                 // Brightness set to max
+
+	// FIXME:最後に点灯状態を消灯時状態にする
+}
+
+func (d *Device) i2cWrite(reg, val uint8) error {
+	return d.bus.WriteRegister(d.Address, reg, []uint8{val})
 }
