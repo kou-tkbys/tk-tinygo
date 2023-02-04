@@ -12,8 +12,6 @@ type Device struct {
 
 // New creates a new ht16k33 connection. The I2C bus must already be configured.
 // This function only creates the Device object, it does not touch the device.
-// 任意のI2Cバスと通信するデバイスオブジェクトを生成します。
-// デバイスオブジェクトを生成するだけで、実デバイスへタッチしていません。
 func New(bus drivers.I2C) *Device {
 	return &Device{
 		bus:     bus,

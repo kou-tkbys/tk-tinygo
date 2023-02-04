@@ -1,7 +1,8 @@
 {
-    // "tinygo info pico" コマンドを実行して得られる項目"build tags","cached GOROOT"をコピペ
+    // run "tinygo info pico", and copy "build tags" and "cached GOROOT" values here.
     "go.toolsEnvVars": {
-        "GOROOT": "C:\\Users\\tkbysk\\AppData\\Local\\tinygo\\goroot-96fa8a51e09b72a6e4692420ed7b88c66054f1e202d1f4d3d40471f581031761",
+        "GOROOT": "C:\\Users\\kou_tkbys\\AppData\\Local\\tinygo\\goroot-da475e348854b923aaa5030b74468fcdb13a0d6df393242bf4a5ae94396963f7",
         "GOFLAGS": "-tags=cortexm,baremetal,linux,arm,rp2040,rp,pico,tinygo,math_big_pure_go,gc.conservative,scheduler.tasks,serial.uart"
     },
+    "go.gocodeAutoBuild": true,
 }
